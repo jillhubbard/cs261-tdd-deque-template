@@ -6,7 +6,9 @@ import time
 from deque import Deque
 
 # Hint: Once test_has_doubly_linked_list_internal passes, uncomment this line.
-# from llist import dllist
+#from llist import dllist
+# Note: If you're having trouble installing llist, use pyllist instead
+#from pyllist import sllist
 
 
 class TestDeque(unittest.TestCase):
@@ -17,7 +19,7 @@ class TestDeque(unittest.TestCase):
 
     def test_instantiation(self):
         """
-        A Deque exists.
+        Test 1: A Deque exists.
         """
         try:
             Deque()
@@ -26,7 +28,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_initial_size(self):
     #     """
-    #     A deque size is initially zero
+    #     Test 2: A deque size is initially zero
     #     """
     #     q = Deque()
     #     self.assertEqual(0,q.items)
@@ -37,7 +39,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_has_doubly_linked_list_internal(self):
     #     """
-    #     A deque has a data member, which is a dllist.
+    #     Test 3: A deque has a data member, which is a dllist.
     #     """
     #     from llist import dllist # Hint: pip3 install llist
     #     d = Deque()
@@ -48,7 +50,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_left_one_internal(self):
     #     """
-    #     Enqueueing a 'left' value adds it to the beginning of the internal dllist.
+    #     Test 4: Enqueueing a 'left' value adds it to the beginning of the internal dllist.
     #     """
     #     d = Deque()
     #     d.enqueue_left('fee')
@@ -56,7 +58,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_left_two_internal(self):
     #     """
-    #     Enqueueing two values to the left results in the first enqueued value
+    #     Test 5: Enqueueing two values to the left results in the first enqueued value
     #     being the second one in the list, and the second value being the first
     #     one in the list.
     #     """
@@ -68,7 +70,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_left_three_internal(self):
     #     """
-    #     Enqueueing three values results in the first enqueued value being the
+    #     Test 6: Enqueueing three values results in the first enqueued value being the
     #     last one in the list, and the third value being the first one in the list.
     #     """
     #     d = Deque()
@@ -80,7 +82,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_right_one_internal(self):
     #     """
-    #     Enqueueing a 'right' value adds it to the beginning of the internal dllist.
+    #     Test 7: Enqueueing a 'right' value adds it to the beginning of the internal dllist.
     #     """
     #     d = Deque()
     #     d.enqueue_right('fee')
@@ -88,7 +90,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_right_two_internal(self):
     #     """
-    #     Enqueueing two values to the right results in the first enqueued value
+    #     Test 8: Enqueueing two values to the right results in the first enqueued value
     #     being the first one in the list, and the second value being the last
     #     one in the list.
     #     """
@@ -100,7 +102,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_right_three_internal(self):
     #     """
-    #     Enqueueing three values results in the first enqueued value being the
+    #     Test 9: Enqueueing three values results in the first enqueued value being the
     #     first one in the list, and the third value being the last one in the list.
     #     """
     #     d = Deque()
@@ -112,7 +114,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_one(self):
     #     """
-    #     Dequeuing from the left of a single-element deque returns the single value.
+    #     Test 10: Dequeuing from the left of a single-element deque returns the single value.
     #     """
     #     d = Deque()
     #     d.enqueue_left('fee')
@@ -122,7 +124,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_one_internal(self):
     #     """
-    #     Dequeuing from the left of a single-element deque removes it from the
+    #     Test 11: Dequeuing from the left of a single-element deque removes it from the
     #     internal dllist.
     #     """
     #     d = Deque()
@@ -133,7 +135,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_two(self):
     #     """
-    #     Dequeuing from the left of a two-element deque returns the last
+    #     Test 12: Dequeuing from the left of a two-element deque returns the last
     #     left-enqueued value.
     #     """
     #     d = Deque()
@@ -143,7 +145,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_two_internal(self):
     #     """
-    #     Dequeuing from the left of a two-element deque removes the last
+    #     Test 13: Dequeuing from the left of a two-element deque removes the last
     #     left-enqueued value from the dllist.
     #     """
     #     d = Deque()
@@ -154,7 +156,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_three(self):
     #     """
-    #     Dequeuing from the left of a three-element deque returns each enqueued
+    #     Test 14: Dequeuing from the left of a three-element deque returns each enqueued
     #     value in FIFO order.
     #     """
     #     d = Deque()
@@ -167,7 +169,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_three_internal(self):
     #     """
-    #     Dequeuing from the left of a three-element deque removes each dequeued
+    #     Test 15: Dequeuing from the left of a three-element deque removes each dequeued
     #     value from the internal dllist, in FIFO order.
     #     """
     #     d = Deque()
@@ -181,7 +183,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_one(self):
     #     """
-    #     Dequeuing from the right of a single-element deque returns the single value.
+    #     Test 16: Dequeuing from the right of a single-element deque returns the single value.
     #     """
     #     d = Deque()
     #     d.enqueue_right('fee')
@@ -191,7 +193,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_one_internal(self):
     #     """
-    #     Dequeuing from the right of a single-element deque removes it from the
+    #     Test 17: Dequeuing from the right of a single-element deque removes it from the
     #     internal dllist.
     #     """
     #     d = Deque()
@@ -202,7 +204,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_two(self):
     #     """
-    #     Dequeuing from the right of a two-element deque returns the last
+    #     Test 18: Dequeuing from the right of a two-element deque returns the last
     #     right-enqueued value.
     #     """
     #     d = Deque()
@@ -212,7 +214,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_two_internal(self):
     #     """
-    #     Dequeuing from the right of a two-element deque removes the last
+    #     Test 19: Dequeuing from the right of a two-element deque removes the last
     #     right-enqueued value from the dllist.
     #     """
     #     d = Deque()
@@ -223,7 +225,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_three(self):
     #     """
-    #     Dequeuing from the right of a three-element deque returns each enqueued
+    #     Test 20: Dequeuing from the right of a three-element deque returns each enqueued
     #     value in LIFO order.
     #     """
     #     d = Deque()
@@ -236,7 +238,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_three_internal(self):
     #     """
-    #     Dequeuing from the right of a three-element deque removes each dequeued
+    #     Test 21: Dequeuing from the right of a three-element deque removes each dequeued
     #     value from the internal dllist, in LIFO order.
     #     """
     #     d = Deque()
@@ -250,7 +252,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_left_dequeue_right(self):
     #     """
-    #     Dequeuing from the right of a three-element deque returns each
+    #     Test 22: Dequeuing from the right of a three-element deque returns each
     #     left-enqueued value in FIFO order.
     #     """
     #     d = Deque()
@@ -263,7 +265,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_right_dequeue_left(self):
     #     """
-    #     Dequeuing from the right of a three-element deque returns each
+    #     Test 23: Dequeuing from the right of a three-element deque returns each
     #     left-enqueued value in FIFO order.
     #     """
     #     d = Deque()
@@ -281,14 +283,14 @@ class TestDeque(unittest.TestCase):
 
     # def test_empty(self):
     #     """
-    #     A deque is initially empty.
+    #     Test 24: A deque is initially empty.
     #     """
     #     d = Deque()
     #     self.assertTrue(d.is_empty())
 
     # def test_not_empty_left(self):
     #     """
-    #     A deque with one left-enqueued value is not empty.
+    #     Test 25: A deque with one left-enqueued value is not empty.
     #     """
     #     d = Deque()
     #     d.enqueue_left('fee')
@@ -296,7 +298,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_not_empty_right(self):
     #     """
-    #     A deque with one right-enqueued value is not empty.
+    #     Test 26: A deque with one right-enqueued value is not empty.
     #     """
     #     d = Deque()
     #     d.enqueue_right('fee')
@@ -304,7 +306,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_empty_after_dequeue_left(self):
     #     """
-    #     A deque with one enqueued value is empty after left-dequeuing.
+    #     Test 27: A deque with one enqueued value is empty after left-dequeuing.
     #     """
     #     d = Deque()
     #     d.enqueue_left('fee')
@@ -313,7 +315,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_empty_after_dequeue_right(self):
     #     """
-    #     A deque with one enqueued value is empty after right-dequeuing.
+    #     Test 28: A deque with one enqueued value is empty after right-dequeuing.
     #     """
     #     d = Deque()
     #     d.enqueue_left('fee')
@@ -322,7 +324,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_not_empty_multiple_left(self):
     #     """
-    #     A deque with two enqueued values is not empty after dequeuing only one
+    #     Test 29: A deque with two enqueued values is not empty after dequeuing only one
     #     from the left.
     #     """
     #     d = Deque()
@@ -333,7 +335,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_not_empty_multiple_right(self):
     #     """
-    #     A deque with two enqueued values is not empty after dequeuing only one
+    #     Test 30: A deque with two enqueued values is not empty after dequeuing only one
     #     from the right.
     #     """
     #     d = Deque()
@@ -349,7 +351,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_right_from_an_empty_deque(self):  
     #     """
-    #     Dequeueing from an empty deque raises ValueError. The size of the queue 
+    #     Test 31: Dequeueing from an empty deque raises ValueError. The size of the queue 
     #     remains 0
     #     """
     #     q = Deque()
@@ -361,7 +363,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_from_an_empty_deque(self):  
     #     """
-    #     Dequeueing from an empty deque raises ValueError. The size of the queue 
+    #     Test 32: Dequeueing from an empty deque raises ValueError. The size of the queue 
     #     remains 0
     #     """
     #     q = Deque()
@@ -373,7 +375,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_size_after_enqueue_right(self):
     #     """
-    #     Enqueueing a values increases the number of items in the deque.
+    #     Test 33: Enqueueing a values increases the number of items in the deque.
     #     """
     #     q = Deque()
     #     q.enqueue_right('fee')
@@ -381,7 +383,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_size_after_enqueue_left(self):
     #     """
-    #     Enqueueing a values increases the number of items in the deque.
+    #     Test 34: Enqueueing a values increases the number of items in the deque.
     #     """
     #     q = Deque()
     #     q.enqueue_left('fi')
@@ -389,7 +391,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_size_after_dequeue_right(self):
     #     """
-    #     Dequeueing decreases the number of items in the deque.
+    #     Test 35: Dequeueing decreases the number of items in the deque.
     #     """
     #     q = Deque()
     #     q.enqueue_right('fee')
@@ -402,7 +404,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_size_after_dequeue_left(self):
     #     """
-    #     Dequeueing decreases the number of items in the deque.
+    #     Test 36: Dequeueing decreases the number of items in the deque.
     #     """
     #     q = Deque()
     #     q.enqueue_left('fee')
@@ -415,7 +417,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_size_after_dequeue_right_or_left(self):
     #     """
-    #     Dequeueing decreases the number of items in the deque.
+    #     Test 37: Dequeueing decreases the number of items in the deque.
     #     """
     #     q = Deque()
     #     q.enqueue_left('fee')
@@ -435,7 +437,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_enqueue_left_vs_right_efficiency(self):
     #     """
-    #     Enqueing a value is always O(1).
+    #     Test 38: Enqueing a value is always O(1).
     #     """
     #     time_samples = []
     #     for _ in range(0, 1000):
@@ -472,7 +474,7 @@ class TestDeque(unittest.TestCase):
 
     # def test_dequeue_left_vs_right_efficiency(self):
     #     """
-    #     Dequeuing a value is always O(1).
+    #     Test 39: Dequeuing a value is always O(1).
     #     """
     #     time_samples = []
     #     for _ in range(0, 1000):
